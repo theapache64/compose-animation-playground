@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Compose Animation Playground</string>
+    <string name="cd_app_logo">App Logo</string>
+    <string name="action_click_me">Click Me!</string>
+    <string name="label_hello_world">Hello World!</string>
+    <string name="label_hello_compose">Hello Compose!</string>
+</resources>
