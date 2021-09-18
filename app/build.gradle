@@ -6,13 +6,13 @@ apply plugin: 'kotlin-kapt'
 apply plugin: 'dagger.hilt.android.plugin'
 
 android {
-    compileSdk 30
+    compileSdk 31
     buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "com.theapache64.composeanimationplayground"
         minSdk 21
-        targetSdk 30
+        targetSdk 31
         versionCode 10001
         versionName "1.0.0-alpha01"
 
@@ -35,6 +35,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
         useIR = true
+        freeCompilerArgs += [
+                "-Xuse-experimental=androidx.compose.animation.ExperimentalAnimationApi"
+        ]
     }
     buildFeatures {
         compose true
