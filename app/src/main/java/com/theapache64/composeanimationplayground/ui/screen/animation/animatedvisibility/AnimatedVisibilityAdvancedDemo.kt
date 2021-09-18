@@ -8,25 +8,6 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.dp
 import com.theapache64.composeanimationplayground.ui.composable.TeslaLogo
 
-
-@Composable
-fun ExpandShrinkVerticallyDemo(isVisible: Boolean) {
-    AnimatedVisibility(
-        visible = isVisible,
-        enter = expandVertically(
-            expandFrom = Alignment.Top,
-            animationSpec = tween(DURATION)
-        ),
-        exit = shrinkVertically(
-            shrinkTowards = Alignment.Top,
-            animationSpec = tween(DURATION)
-        )
-    ) {
-        TeslaLogo()
-    }
-}
-
-
 @Composable
 fun AnimatedVisibilityAdvancedDemo(isVisible: Boolean) {
     val density = LocalDensity.current

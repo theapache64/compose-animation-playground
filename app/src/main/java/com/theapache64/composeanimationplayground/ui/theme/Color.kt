@@ -7,4 +7,4 @@ val CodGray_300 = Color(0xFF232323)
 val CodGray_500 = Color(0xFF353535)
 val CodGray_700 = Color(0xFF525252)
 
-val Cerulean = Color(0xff02BBE0)
+val TeslaRed = Color(0xffDF2839)

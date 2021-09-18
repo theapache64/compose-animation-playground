@@ -19,24 +19,28 @@ private val animations: List<AnimationItem> by lazy {
         ) { isVisible ->
             DefaultDemo(isVisible)
         },
+
         AnimationItem(
             title = "fadeIn + fadeOut",
             description = "Content appears by fading in, and it disappears by fading out"
         ) { isVisible ->
             FadeInFadeOutDemo(isVisible)
         },
+
         AnimationItem(
             title = "slideIn + slideOut",
             description = "Content appears by sliding in, and it disappears by sliding out"
         ) { isVisible ->
             SlideInOutDemo(isVisible)
         },
+
         AnimationItem(
             title = "slideIn/slideOut horizontally",
             description = "Content appears by sliding in horizontally, and it disappears by sliding out horizontally"
         ) { isVisible ->
             SlideInOutHorizontallyDemo(isVisible)
         },
+
         AnimationItem(
             title = "slideIn/slideOut vertically",
             description = "Content appears by sliding in vertically, and it disappears by sliding out vertically"
@@ -80,6 +84,14 @@ private val animations: List<AnimationItem> by lazy {
         ) { isVisible ->
             AnimateEnterExitOnChildDemo(isVisible)
         },
+
+        AnimationItem(
+            title = "TransitionApiDemo",
+            description = "Content appears by scale in with TeslaRed, and it disappears by scale out with transparent color"
+        ) { isVisible ->
+            TransitionApiDemo(isVisible)
+        },
+
         AnimationItem(
             title = "Advanced Sample",
             description = "Content appears by slideIn + expandVertical + fadeIn, and it disappears by slideOut + shrinkVertical + fadeOut"
