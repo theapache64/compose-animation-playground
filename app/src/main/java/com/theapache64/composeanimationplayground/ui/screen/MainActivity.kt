@@ -4,7 +4,6 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.material.Surface
-import com.theapache64.composeanimationplayground.ui.screen.animation.animatedvisibility.ChildBasedAnimationDemo
 import com.theapache64.composeanimationplayground.ui.theme.ComposeAndroidTemplateTheme
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -16,8 +15,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             ComposeAndroidTemplateTheme {
                 Surface {
-                    // AppNavigation()
-                    ChildBasedAnimationDemo()
+                    AppNavigation()
                 }
             }
         }

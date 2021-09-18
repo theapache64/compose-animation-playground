@@ -6,7 +6,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.theapache64.composeanimationplayground.model.AnimationScreen
 import com.theapache64.composeanimationplayground.ui.screen.animation.animatedvisibility.AnimatedVisibilityScreen
-import com.theapache64.composeanimationplayground.ui.screen.animation.animatedvisibility.ChildBasedAnimationDemo
+import com.theapache64.composeanimationplayground.ui.screen.animation.animatedvisibility.AnimateEnterExitOnChildDemo
 import com.theapache64.composeanimationplayground.ui.screen.animation.animatedvisibility.MutableTransitionStateDemoScreen
 import com.theapache64.composeanimationplayground.ui.screen.selector.AnimationSelector
 import com.theapache64.composeanimationplayground.ui.screen.splash.SplashScreen
@@ -54,10 +54,6 @@ private val animationScreens: List<AnimationScreen> by lazy {
         },
         AnimationScreen("MutableTransitionState") {
             MutableTransitionStateDemoScreen()
-        },
-
-        AnimationScreen("animateEnterExit") {
-            ChildBasedAnimationDemo()
         },
         AnimationScreen("Animate enter and exit for children") {},
     )

@@ -69,6 +69,15 @@ private val animations: List<AnimationItem> by lazy {
         ) { isVisible ->
             ExpandShrinkVerticallyDemo(isVisible)
         },
+
+        AnimationItem(
+            title = "animateEnterExit",
+            description = "Using `animateEnterExit` method, you can add additional animations" +
+                    " to the direct/indirect children of `AnimatedVisibility`. Pretty helpful" +
+                    " when you want to inherit animations. "
+        ) { isVisible ->
+            AnimateEnterExitOnChildDemo(isVisible)
+        },
         AnimationItem(
             title = "Advanced Sample",
             description = "Content appears by slideIn + expandVertical + fadeIn, and it disappears by slideOut + shrinkVertical + fadeOut"
