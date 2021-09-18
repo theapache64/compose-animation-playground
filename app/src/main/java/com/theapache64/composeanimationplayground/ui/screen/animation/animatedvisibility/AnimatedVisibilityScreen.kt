@@ -9,6 +9,8 @@ import androidx.compose.runtime.Composable
 import com.theapache64.composeanimationplayground.model.AnimationItem
 import com.theapache64.composeanimationplayground.ui.composable.AnimationItem
 
+const val DURATION = 2000
+
 private val animations: List<AnimationItem> by lazy {
     mutableListOf(
         AnimationItem(
