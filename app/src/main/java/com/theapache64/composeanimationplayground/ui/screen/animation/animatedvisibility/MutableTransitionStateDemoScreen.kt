@@ -6,17 +6,14 @@ import androidx.compose.animation.core.MutableTransitionState
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Button
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import com.theapache64.composeanimationplayground.ui.composable.BigColumn
 import com.theapache64.composeanimationplayground.ui.composable.TeslaLogo
 
 @ExperimentalTransitionApi
@@ -26,11 +23,7 @@ fun MutableTransitionStateDemoScreen() {
         MutableTransitionState(false)
     }
 
-    Column(
-        modifier = Modifier.fillMaxSize(),
-        horizontalAlignment = Alignment.CenterHorizontally,
-        verticalArrangement = Arrangement.Center
-    ) {
+    BigColumn {
         AnimatedVisibility(
             visibleState = animationState,
             enter = fadeIn(animationSpec = tween(2000)),
