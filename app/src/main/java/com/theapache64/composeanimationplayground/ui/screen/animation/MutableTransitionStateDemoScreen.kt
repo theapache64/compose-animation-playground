@@ -21,7 +21,7 @@ import com.theapache64.composeanimationplayground.ui.composable.TeslaLogo
 
 @ExperimentalTransitionApi
 @Composable
-fun MutableTransitionStateDemo() {
+fun MutableTransitionStateDemoScreen() {
     val animationState = remember {
         MutableTransitionState(false)
     }

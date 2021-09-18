@@ -36,7 +36,8 @@ android {
         jvmTarget = '1.8'
         useIR = true
         freeCompilerArgs += [
-                "-Xuse-experimental=androidx.compose.animation.ExperimentalAnimationApi"
+                "-Xuse-experimental=androidx.compose.animation.ExperimentalAnimationApi",
+                "-Xuse-experimental=androidx.compose.animation.core.ExperimentalTransitionApi",
         ]
     }
     buildFeatures {

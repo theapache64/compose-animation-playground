@@ -6,6 +6,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.theapache64.composeanimationplayground.model.AnimationScreen
 import com.theapache64.composeanimationplayground.ui.screen.animation.animatedvisibility.AnimatedVisibilityScreen
+import com.theapache64.composeanimationplayground.ui.screen.animation.animatedvisibility.MutableTransitionStateDemoScreen
 import com.theapache64.composeanimationplayground.ui.screen.selector.AnimationSelector
 import com.theapache64.composeanimationplayground.ui.screen.splash.SplashScreen
 
@@ -13,7 +14,7 @@ import com.theapache64.composeanimationplayground.ui.screen.splash.SplashScreen
 fun AppNavigation() {
 
     val navController = rememberNavController()
-    NavHost(navController = navController, startDestination = animationScreens[0].title) {
+    NavHost(navController = navController, startDestination = animationScreens[1].title) {
         // Splash
         composable(Screen.Splash.route) {
             SplashScreen(
@@ -48,6 +49,9 @@ private val animationScreens: List<AnimationScreen> by lazy {
     mutableListOf(
         AnimationScreen("AnimatedVisibility") { onBackClicked ->
             AnimatedVisibilityScreen(onBackClicked)
+        },
+        AnimationScreen("MutableTransitionState") {
+            MutableTransitionStateDemoScreen()
         },
         AnimationScreen("Animate enter and exit for children") {},
     )
