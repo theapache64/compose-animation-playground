@@ -5,9 +5,10 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.theapache64.composeanimationplayground.model.AnimationScreen
-import com.theapache64.composeanimationplayground.ui.screen.animation.animatedcontent.DefaultDemoScreen
 import com.theapache64.composeanimationplayground.ui.screen.animation.AnimatedVisibilityScreen
 import com.theapache64.composeanimationplayground.ui.screen.animation.animatedcontent.CustomTransitionDemoScreen
+import com.theapache64.composeanimationplayground.ui.screen.animation.animatedcontent.DefaultDemoScreen
+import com.theapache64.composeanimationplayground.ui.screen.animation.animatedcontent.SizeTransformSampleScreen
 import com.theapache64.composeanimationplayground.ui.screen.animation.animatedvisibility.MutableTransitionStateDemoScreen
 import com.theapache64.composeanimationplayground.ui.screen.selector.AnimationSelector
 import com.theapache64.composeanimationplayground.ui.screen.splash.SplashScreen
@@ -16,7 +17,7 @@ import com.theapache64.composeanimationplayground.ui.screen.splash.SplashScreen
 fun AppNavigation() {
 
     val navController = rememberNavController()
-    NavHost(navController = navController, startDestination = animationScreens[3].title) {
+    NavHost(navController = navController, startDestination = animationScreens[4].title) {
 //    NavHost(navController = navController, startDestination = Screen.Dashboard.route) {
         // Splash
         composable(Screen.Splash.route) {
@@ -61,6 +62,9 @@ private val animationScreens: List<AnimationScreen> by lazy {
         },
         AnimationScreen("Custom AnimatedContent") {
             CustomTransitionDemoScreen()
+        },
+        AnimationScreen("SizeTransform Sample") {
+            SizeTransformSampleScreen()
         },
     )
 }

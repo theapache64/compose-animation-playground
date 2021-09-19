@@ -27,11 +27,12 @@ import androidx.compose.ui.graphics.Color
 
 @Composable
 fun BigColumn(
+    modifier: Modifier = Modifier,
     color: Color = MaterialTheme.colors.background,
     content: @Composable () -> Unit
 ) {
     Column(
-        Modifier
+        modifier
             .fillMaxSize()
             .background(color),
         verticalArrangement = Arrangement.Center,

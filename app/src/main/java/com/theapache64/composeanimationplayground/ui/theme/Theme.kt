@@ -9,6 +9,7 @@ private val DarkColorPalette = darkColors(
     primary = CodGray_100,
     primaryVariant = CodGray_300,
     secondary = CodGray_500,
+    background = CodGray_100,
     onPrimary = Color.White,
     onSecondary = Color.White,
     onSurface = Color.White,

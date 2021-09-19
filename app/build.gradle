@@ -38,6 +38,7 @@ android {
         freeCompilerArgs += [
                 "-Xuse-experimental=androidx.compose.animation.ExperimentalAnimationApi",
                 "-Xuse-experimental=androidx.compose.animation.core.ExperimentalTransitionApi",
+                "-Xuse-experimental=androidx.compose.material.ExperimentalMaterialApi",
         ]
     }
     buildFeatures {

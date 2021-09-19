@@ -40,7 +40,10 @@ fun CustomTransitionDemoScreen() {
                 )
             }
         ) { targetCount ->
-            Text(text = targetCount.toString(), fontSize = 30.sp)
+            Text(
+                text = targetCount.toString(),
+                fontSize = 30.sp
+            )
         }
         Spacer(modifier = Modifier.height(10.dp))
         Row {
