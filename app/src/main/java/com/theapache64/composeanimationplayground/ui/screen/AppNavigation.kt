@@ -6,10 +6,12 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.theapache64.composeanimationplayground.model.AnimationScreen
 import com.theapache64.composeanimationplayground.ui.screen.animation.AnimatedVisibilityScreen
-import com.theapache64.composeanimationplayground.ui.screen.animation.animatedcontent.CustomTransitionDemoScreen
-import com.theapache64.composeanimationplayground.ui.screen.animation.animatedcontent.DefaultDemoScreen
-import com.theapache64.composeanimationplayground.ui.screen.animation.animatedcontent.SizeTransformSampleScreen
-import com.theapache64.composeanimationplayground.ui.screen.animation.animatedvisibility.MutableTransitionStateDemoScreen
+import com.theapache64.composeanimationplayground.ui.screen.animation.CrossfadeScreen
+import com.theapache64.composeanimationplayground.ui.screen.animation.animatedcontent.AnimateContentSizeScreen
+import com.theapache64.composeanimationplayground.ui.screen.animation.animatedcontent.CustomTransitionScreen
+import com.theapache64.composeanimationplayground.ui.screen.animation.animatedcontent.DefaultScreen
+import com.theapache64.composeanimationplayground.ui.screen.animation.animatedcontent.SizeTransformScreen
+import com.theapache64.composeanimationplayground.ui.screen.animation.animatedvisibility.MutableTransitionStateScreen
 import com.theapache64.composeanimationplayground.ui.screen.selector.AnimationSelector
 import com.theapache64.composeanimationplayground.ui.screen.splash.SplashScreen
 
@@ -17,7 +19,7 @@ import com.theapache64.composeanimationplayground.ui.screen.splash.SplashScreen
 fun AppNavigation() {
 
     val navController = rememberNavController()
-    NavHost(navController = navController, startDestination = animationScreens[4].title) {
+    NavHost(navController = navController, startDestination = animationScreens[6].title) {
 //    NavHost(navController = navController, startDestination = Screen.Dashboard.route) {
         // Splash
         composable(Screen.Splash.route) {
@@ -55,16 +57,23 @@ private val animationScreens: List<AnimationScreen> by lazy {
             AnimatedVisibilityScreen(onBackClicked)
         },
         AnimationScreen("MutableTransitionState") {
-            MutableTransitionStateDemoScreen()
+            MutableTransitionStateScreen()
         },
         AnimationScreen("AnimatedContent") {
-            DefaultDemoScreen()
+            DefaultScreen()
         },
         AnimationScreen("Custom AnimatedContent") {
-            CustomTransitionDemoScreen()
+            CustomTransitionScreen()
         },
         AnimationScreen("SizeTransform Sample") {
-            SizeTransformSampleScreen()
+            SizeTransformScreen()
+        },
+        AnimationScreen("animateContentSize Sample") {
+            AnimateContentSizeScreen()
+        },
+
+        AnimationScreen("Crossfade Sample") {
+            CrossfadeScreen()
         },
     )
 }

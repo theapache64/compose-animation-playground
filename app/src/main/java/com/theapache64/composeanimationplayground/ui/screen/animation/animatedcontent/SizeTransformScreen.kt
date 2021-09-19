@@ -16,7 +16,7 @@ import com.theapache64.composeanimationplayground.ui.composable.TeslaLogo
 import com.theapache64.composeanimationplayground.ui.theme.CodGray_700
 
 @Composable
-fun SizeTransformSampleScreen() {
+fun SizeTransformScreen() {
     var expanded by remember { mutableStateOf(false) }
     Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
         Surface(
@@ -32,7 +32,7 @@ fun SizeTransformSampleScreen() {
                                     // Expand animation
                                     keyframes {
                                         // Expand horizontally first.
-                                        IntSize(targetSize.width, initialSize.height) at 2000
+                                        IntSize(targetSize.width + 300, initialSize.height) at 2000
 
                                         /**
                                          * Here the total duration is 3s.

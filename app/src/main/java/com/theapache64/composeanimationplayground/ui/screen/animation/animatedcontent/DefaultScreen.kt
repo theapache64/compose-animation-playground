@@ -12,7 +12,7 @@ import androidx.compose.ui.unit.sp
 import com.theapache64.composeanimationplayground.ui.composable.BigColumn
 
 @Composable
-fun DefaultDemoScreen() {
+fun DefaultScreen() {
     BigColumn {
         var count by remember { mutableStateOf(0) }
         AnimatedContent(

@@ -15,7 +15,7 @@ import com.theapache64.composeanimationplayground.ui.composable.BigColumn
 private const val FLY_RANGE = 500
 
 @Composable
-fun CustomTransitionDemoScreen() {
+fun CustomTransitionScreen() {
     BigColumn {
         var count by remember { mutableStateOf(0) }
         AnimatedContent(
