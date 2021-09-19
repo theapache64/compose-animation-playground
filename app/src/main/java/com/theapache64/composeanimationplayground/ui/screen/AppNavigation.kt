@@ -20,8 +20,8 @@ import com.theapache64.composeanimationplayground.ui.screen.splash.SplashScreen
 fun AppNavigation() {
 
     val navController = rememberNavController()
-    NavHost(navController = navController, startDestination = animationScreens[8].title) {
-    //NavHost(navController = navController, startDestination = Screen.Splash.route) {
+    //NavHost(navController = navController, startDestination = animationScreens[8].title) {
+    NavHost(navController = navController, startDestination = Screen.Splash.route) {
         // Splash
         composable(Screen.Splash.route) {
             SplashScreen(
@@ -80,8 +80,20 @@ private val animationScreens: List<AnimationScreen> by lazy {
             TODO("TODO: Float, Color, Dp, Size, Bounds, Offset, Rect, Int, IntOffset, and IntSize")
         },
 
-        AnimationScreen("Animatable"){
-            AnimatableScreen()
-        }
+        AnimationScreen("Animatable") { AnimatableScreen() },
+        AnimationScreen("updateTransition") { TODO("https://developer.android.com/jetpack/compose/animation#animatable") },
+        AnimationScreen("updateTransition with AnimatedVisibility") { TODO("https://developer.android.com/jetpack/compose/animation#use-transition-with-animatedvisibility-and-animatedcontent") },
+        AnimationScreen("Reusable updateTransition") { TODO() },
+        AnimationScreen("rememberInfiniteTransition") { TODO() },
+        AnimationScreen("TargetBasedAnimation") { TODO() },
+        AnimationScreen("animationSpec : spring") { TODO("Demo dampingRatio and stiffness with tabs maybe") },
+        AnimationScreen("animationSpec : tween") { TODO("Demo with two boxes and custom controls") },
+        AnimationScreen("animationSpec : keyframes") { TODO("Demo with two boxes and custom controls") },
+        AnimationScreen("animationSpec : repeatable") { TODO() },
+        AnimationScreen("animationSpec : infiniteRepeatable") { TODO() },
+        AnimationScreen("animationSpec : snap") { TODO() },
+        AnimationScreen("animationSpec : Easing") { TODO() },
+        AnimationScreen("Custom AnimationVector") { TODO() },
+        AnimationScreen("Gesture Animation : SwipeToDismiss") { TODO() },
     )
 }
