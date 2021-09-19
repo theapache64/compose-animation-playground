@@ -4,6 +4,6 @@ import androidx.compose.runtime.Composable
 
 data class AnimationItem(
     val title: String,
-    val description : String,
+    val description: String,
     val content: @Composable (isVisible: Boolean) -> Unit
 )

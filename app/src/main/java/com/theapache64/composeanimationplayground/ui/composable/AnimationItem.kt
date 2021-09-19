@@ -18,7 +18,7 @@ import com.theapache64.composeanimationplayground.ui.theme.CodGray_700
 
 @Composable
 fun AnimationItem(
-    index :Int,
+    index: Int,
     animationItem: AnimationItem
 ) {
     var isVisible by remember { mutableStateOf(true) }
@@ -32,7 +32,7 @@ fun AnimationItem(
                 modifier = Modifier.fillMaxWidth(),
                 contentAlignment = Alignment.CenterStart
             ) {
-                Text(text = "${index+1}) ${animationItem.title}")
+                Text(text = "${index + 1}) ${animationItem.title}")
                 IconButton(
                     onClick = { isVisible = !isVisible },
                     modifier = Modifier.align(Alignment.CenterEnd)

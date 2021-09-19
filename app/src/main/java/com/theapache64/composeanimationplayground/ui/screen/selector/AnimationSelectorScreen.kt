@@ -17,7 +17,7 @@ import com.theapache64.composeanimationplayground.model.AnimationScreen
 
 @Composable
 fun AnimationSelector(
-    animations : List<AnimationScreen>,
+    animations: List<AnimationScreen>,
     onAnimationSelected: (AnimationScreen) -> Unit
 ) {
     Scaffold(

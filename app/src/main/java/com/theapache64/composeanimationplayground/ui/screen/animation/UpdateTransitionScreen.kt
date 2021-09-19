@@ -10,15 +10,14 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.tooling.preview.Devices
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.theapache64.composeanimationplayground.ui.composable.BigColumn
 
-private enum class BoxState {
-    SMALL, MEDIUM, LARGE
-}
+private enum class BoxState { SMALL, MEDIUM, LARGE }
 
-@Preview
+@Preview(device = Devices.DEFAULT)
 @Composable
 fun UpdateTransitionScreen() {
     BigColumn {
@@ -61,8 +60,6 @@ fun UpdateTransitionScreen() {
             Button(onClick = { currentState = BoxState.LARGE }) {
                 Text(text = "LARGE BLUE")
             }
-
-
         }
     }
 }
