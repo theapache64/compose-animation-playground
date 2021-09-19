@@ -8,6 +8,7 @@ import com.theapache64.composeanimationplayground.model.AnimationScreen
 import com.theapache64.composeanimationplayground.ui.screen.animation.AnimatableScreen
 import com.theapache64.composeanimationplayground.ui.screen.animation.AnimatedVisibilityScreen
 import com.theapache64.composeanimationplayground.ui.screen.animation.CrossfadeScreen
+import com.theapache64.composeanimationplayground.ui.screen.animation.UpdateTransitionScreen
 import com.theapache64.composeanimationplayground.ui.screen.animation.animatedcontent.AnimateContentSizeScreen
 import com.theapache64.composeanimationplayground.ui.screen.animation.animatedcontent.CustomTransitionScreen
 import com.theapache64.composeanimationplayground.ui.screen.animation.animatedcontent.DefaultScreen
@@ -20,8 +21,11 @@ import com.theapache64.composeanimationplayground.ui.screen.splash.SplashScreen
 fun AppNavigation() {
 
     val navController = rememberNavController()
-    //NavHost(navController = navController, startDestination = animationScreens[8].title) {
-    NavHost(navController = navController, startDestination = Screen.Splash.route) {
+    NavHost(
+        navController = navController,
+        startDestination = "updateTransition"
+        //startDestination = Screen.Splash.route
+    ) {
         // Splash
         composable(Screen.Splash.route) {
             SplashScreen(
@@ -81,7 +85,9 @@ private val animationScreens: List<AnimationScreen> by lazy {
         },
 
         AnimationScreen("Animatable") { AnimatableScreen() },
-        AnimationScreen("updateTransition") { TODO("https://developer.android.com/jetpack/compose/animation#animatable") },
+        AnimationScreen("updateTransition") {
+            UpdateTransitionScreen()
+        },
         AnimationScreen("updateTransition with AnimatedVisibility") { TODO("https://developer.android.com/jetpack/compose/animation#use-transition-with-animatedvisibility-and-animatedcontent") },
         AnimationScreen("Reusable updateTransition") { TODO() },
         AnimationScreen("rememberInfiniteTransition") { TODO() },
