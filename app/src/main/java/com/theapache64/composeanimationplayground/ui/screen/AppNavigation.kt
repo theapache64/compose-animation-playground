@@ -5,6 +5,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.theapache64.composeanimationplayground.model.AnimationScreen
+import com.theapache64.composeanimationplayground.ui.screen.animation.AnimatableScreen
 import com.theapache64.composeanimationplayground.ui.screen.animation.AnimatedVisibilityScreen
 import com.theapache64.composeanimationplayground.ui.screen.animation.CrossfadeScreen
 import com.theapache64.composeanimationplayground.ui.screen.animation.animatedcontent.AnimateContentSizeScreen
@@ -19,8 +20,8 @@ import com.theapache64.composeanimationplayground.ui.screen.splash.SplashScreen
 fun AppNavigation() {
 
     val navController = rememberNavController()
-    NavHost(navController = navController, startDestination = animationScreens[6].title) {
-//    NavHost(navController = navController, startDestination = Screen.Dashboard.route) {
+    NavHost(navController = navController, startDestination = animationScreens[8].title) {
+    //NavHost(navController = navController, startDestination = Screen.Splash.route) {
         // Splash
         composable(Screen.Splash.route) {
             SplashScreen(
@@ -75,5 +76,12 @@ private val animationScreens: List<AnimationScreen> by lazy {
         AnimationScreen("Crossfade Sample") {
             CrossfadeScreen()
         },
+        AnimationScreen("animate*AsState (TODO)") {
+            TODO("TODO: Float, Color, Dp, Size, Bounds, Offset, Rect, Int, IntOffset, and IntSize")
+        },
+
+        AnimationScreen("Animatable"){
+            AnimatableScreen()
+        }
     )
 }
