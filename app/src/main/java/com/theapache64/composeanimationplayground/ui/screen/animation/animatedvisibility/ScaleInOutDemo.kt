@@ -6,6 +6,7 @@ import androidx.compose.animation.scaleIn
 import androidx.compose.animation.scaleOut
 import androidx.compose.runtime.Composable
 import com.theapache64.composeanimationplayground.ui.composable.TeslaLogo
+import com.theapache64.composeanimationplayground.ui.screen.animation.DURATION
 
 @Composable
 fun ScaleInOutDemo(isVisible: Boolean) {

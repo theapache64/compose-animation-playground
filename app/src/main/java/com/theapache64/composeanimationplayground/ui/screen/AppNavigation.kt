@@ -5,8 +5,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.theapache64.composeanimationplayground.model.AnimationScreen
-import com.theapache64.composeanimationplayground.ui.screen.animation.animatedvisibility.AnimatedVisibilityScreen
-import com.theapache64.composeanimationplayground.ui.screen.animation.animatedvisibility.AnimateEnterExitOnChildDemo
+import com.theapache64.composeanimationplayground.ui.screen.animation.animatedcontent.DefaultDemoScreen
+import com.theapache64.composeanimationplayground.ui.screen.animation.AnimatedVisibilityScreen
+import com.theapache64.composeanimationplayground.ui.screen.animation.animatedcontent.CustomTransitionDemoScreen
 import com.theapache64.composeanimationplayground.ui.screen.animation.animatedvisibility.MutableTransitionStateDemoScreen
 import com.theapache64.composeanimationplayground.ui.screen.selector.AnimationSelector
 import com.theapache64.composeanimationplayground.ui.screen.splash.SplashScreen
@@ -15,7 +16,7 @@ import com.theapache64.composeanimationplayground.ui.screen.splash.SplashScreen
 fun AppNavigation() {
 
     val navController = rememberNavController()
-    NavHost(navController = navController, startDestination = animationScreens[0].title) {
+    NavHost(navController = navController, startDestination = animationScreens[3].title) {
 //    NavHost(navController = navController, startDestination = Screen.Dashboard.route) {
         // Splash
         composable(Screen.Splash.route) {
@@ -55,6 +56,11 @@ private val animationScreens: List<AnimationScreen> by lazy {
         AnimationScreen("MutableTransitionState") {
             MutableTransitionStateDemoScreen()
         },
-        AnimationScreen("Animate enter and exit for children") {},
+        AnimationScreen("AnimatedContent") {
+            DefaultDemoScreen()
+        },
+        AnimationScreen("Custom AnimatedContent") {
+            CustomTransitionDemoScreen()
+        },
     )
 }

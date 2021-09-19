@@ -10,6 +10,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.theapache64.composeanimationplayground.ui.composable.TeslaLogo
+import com.theapache64.composeanimationplayground.ui.screen.animation.DURATION
 import com.theapache64.composeanimationplayground.ui.theme.TeslaRed
 
 @Composable

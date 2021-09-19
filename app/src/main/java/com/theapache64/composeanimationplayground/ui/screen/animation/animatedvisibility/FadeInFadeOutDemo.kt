@@ -6,6 +6,7 @@ import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.runtime.Composable
 import com.theapache64.composeanimationplayground.ui.composable.TeslaLogo
+import com.theapache64.composeanimationplayground.ui.screen.animation.DURATION
 
 @Composable
 fun FadeInFadeOutDemo(isVisible: Boolean) {

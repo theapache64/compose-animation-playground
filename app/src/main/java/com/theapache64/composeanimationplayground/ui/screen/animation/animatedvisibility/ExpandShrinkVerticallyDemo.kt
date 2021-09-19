@@ -7,6 +7,7 @@ import androidx.compose.animation.shrinkVertically
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import com.theapache64.composeanimationplayground.ui.composable.TeslaLogo
+import com.theapache64.composeanimationplayground.ui.screen.animation.DURATION
 
 @Composable
 fun ExpandShrinkVerticallyDemo(isVisible: Boolean) {

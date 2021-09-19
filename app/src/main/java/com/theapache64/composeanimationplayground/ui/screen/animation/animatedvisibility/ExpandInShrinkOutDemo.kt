@@ -10,6 +10,7 @@ import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
 import com.theapache64.composeanimationplayground.ui.composable.TeslaLogo
+import com.theapache64.composeanimationplayground.ui.screen.animation.DURATION
 
 @Composable
 fun ExpandInShrinkOutDemo(isVisible: Boolean) {

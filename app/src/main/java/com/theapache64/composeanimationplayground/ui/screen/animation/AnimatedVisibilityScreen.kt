@@ -1,4 +1,4 @@
-package com.theapache64.composeanimationplayground.ui.screen.animation.animatedvisibility
+package com.theapache64.composeanimationplayground.ui.screen.animation
 
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.itemsIndexed
@@ -8,6 +8,7 @@ import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.runtime.Composable
 import com.theapache64.composeanimationplayground.model.AnimationItem
 import com.theapache64.composeanimationplayground.ui.composable.AnimationItem
+import com.theapache64.composeanimationplayground.ui.screen.animation.animatedvisibility.*
 
 const val DURATION = 2000
 
