@@ -23,9 +23,11 @@ fun App() {
     Box {
         var isTransparent by remember { mutableStateOf(false) }
         val transition = updateTransition(targetState = isTransparent, label = "My Animation")
-        transition.AnimatedContent { isTrans ->
-            if (isTrans) {
-                // Show both red and green
+        transition.AnimatedContent {
+            if (isTransparent) {
+                /**
+                 * 💥 Here the app will crash because the lock didn't release by else block's RedScreen since its being animated.
+                 */
                 RedScreen()
                 GreenScreen()
             } else {
@@ -33,7 +35,6 @@ fun App() {
                 RedScreen()
             }
         }
-
 
         Button(
             onClick = { isTransparent = !isTransparent },
@@ -47,27 +48,29 @@ fun App() {
 }
 
 var lock = false
-fun lock() {
+fun acquireLock() {
     check(!lock) { "Lock already taken" }
     lock = true
 }
 
-fun unlock() {
+fun releaseLock() {
     lock = false
 }
 
 @Composable
-fun RedScreen() {
+fun RedScreen(
+    modifier: Modifier = Modifier
+) {
     DisposableEffect(Unit) {
         println("123: RedScreen created")
-        lock()
+        acquireLock()
         onDispose {
             println("123: RedScreen destroyed")
-            unlock()
+            releaseLock()
         }
     }
     Box(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxSize()
             .background(Color.Red),
         contentAlignment = Alignment.Center
@@ -77,9 +80,11 @@ fun RedScreen() {
 }
 
 @Composable
-fun GreenScreen() {
+fun GreenScreen(
+    modifier: Modifier = Modifier
+) {
     Box(
-        modifier = Modifier
+        modifier = modifier
             .fillMaxSize()
             .background(Color.Green.copy(alpha = 0.5f)),
         contentAlignment = Alignment.Center
