@@ -1,6 +1,7 @@
 package com.theapache64.composeanimationplayground.ui
 
 import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.core.MutableTransitionState
 import androidx.compose.animation.core.updateTransition
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -8,7 +9,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Button
 import androidx.compose.material.Text
-import androidx.compose.runtime.*
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -21,10 +24,10 @@ import androidx.compose.ui.unit.sp
 @Composable
 fun App() {
     Box {
-        var isTransparent by remember { mutableStateOf(false) }
-        val transition = updateTransition(targetState = isTransparent, label = "My Animation")
-        transition.AnimatedContent {
-            if (isTransparent) {
+        val isTransparent = remember { MutableTransitionState(false) }
+        val transition = updateTransition(transitionState = isTransparent, label = "My Animation")
+        transition.AnimatedContent { isTrans ->
+            if (isTrans) {
                 /**
                  * 💥 Here the app will crash because the lock didn't release by else block's RedScreen since its being animated.
                  */
@@ -37,7 +40,7 @@ fun App() {
         }
 
         Button(
-            onClick = { isTransparent = !isTransparent },
+            onClick = { isTransparent.targetState = !isTransparent.targetState },
             modifier = Modifier
                 .align(Alignment.BottomCenter)
                 .padding(10.dp)
