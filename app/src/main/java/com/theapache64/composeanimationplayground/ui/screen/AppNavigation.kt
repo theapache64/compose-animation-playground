@@ -5,10 +5,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.theapache64.composeanimationplayground.model.AnimationScreen
-import com.theapache64.composeanimationplayground.ui.screen.animation.AnimatableScreen
-import com.theapache64.composeanimationplayground.ui.screen.animation.AnimatedVisibilityScreen
-import com.theapache64.composeanimationplayground.ui.screen.animation.CrossfadeScreen
-import com.theapache64.composeanimationplayground.ui.screen.animation.UpdateTransitionScreen
+import com.theapache64.composeanimationplayground.ui.screen.animation.*
 import com.theapache64.composeanimationplayground.ui.screen.animation.animatedcontent.AnimateContentSizeScreen
 import com.theapache64.composeanimationplayground.ui.screen.animation.animatedcontent.CustomTransitionScreen
 import com.theapache64.composeanimationplayground.ui.screen.animation.animatedcontent.DefaultScreen
@@ -23,7 +20,7 @@ fun AppNavigation() {
     val navController = rememberNavController()
     NavHost(
         navController = navController,
-        startDestination = "updateTransition"
+        startDestination = "updateTransition with AnimatedVisibility"
         //startDestination = Screen.Splash.route
     ) {
         // Splash
@@ -88,7 +85,9 @@ private val animationScreens: List<AnimationScreen> by lazy {
         AnimationScreen("updateTransition") {
             UpdateTransitionScreen()
         },
-        AnimationScreen("updateTransition with AnimatedVisibility") { TODO("https://developer.android.com/jetpack/compose/animation#use-transition-with-animatedvisibility-and-animatedcontent") },
+        AnimationScreen("updateTransition with AnimatedVisibility") {
+            UpdateTransitionAnimateContentScreen()
+        },
         AnimationScreen("Reusable updateTransition") { TODO() },
         AnimationScreen("rememberInfiniteTransition") { TODO() },
         AnimationScreen("TargetBasedAnimation") { TODO() },

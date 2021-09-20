@@ -9,12 +9,14 @@ import androidx.compose.material.Surface
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
 import com.theapache64.composeanimationplayground.ui.composable.ComposeLogo
 import com.theapache64.composeanimationplayground.ui.composable.TeslaLogo
 import com.theapache64.composeanimationplayground.ui.theme.CodGray_700
 
+@Preview
 @Composable
 fun SizeTransformScreen() {
     var expanded by remember { mutableStateOf(false) }
@@ -32,7 +34,7 @@ fun SizeTransformScreen() {
                                     // Expand animation
                                     keyframes {
                                         // Expand horizontally first.
-                                        IntSize(targetSize.width + 300, initialSize.height) at 2000
+                                        IntSize(targetSize.width, targetSize.height) at 2000 // 0 to 2000
 
                                         /**
                                          * Here the total duration is 3s.
@@ -44,7 +46,7 @@ fun SizeTransformScreen() {
                                     // Shrink animation
                                     keyframes {
                                         // Shrink vertically first.
-                                        IntSize(initialSize.width, targetSize.height) at 2000
+                                        IntSize(targetSize.width, targetSize.height) at 2000 // 0 to 2000
 
                                         /**
                                          * Here the total duration is 3s.
