@@ -20,7 +20,8 @@ fun AppNavigation() {
     val navController = rememberNavController()
     NavHost(
         navController = navController,
-        startDestination = "updateTransition with AnimatedVisibility"
+        startDestination = "createChildTransitionDemo" +
+                ""
         //startDestination = Screen.Splash.route
     ) {
         // Splash
@@ -87,6 +88,9 @@ private val animationScreens: List<AnimationScreen> by lazy {
         },
         AnimationScreen("updateTransition with AnimatedVisibility") {
             UpdateTransitionAnimateContentScreen()
+        },
+        AnimationScreen("createChildTransitionDemo") {
+            ChildTransitionDemo()
         },
         AnimationScreen("Reusable updateTransition") { TODO() },
         AnimationScreen("rememberInfiniteTransition") { TODO() },
