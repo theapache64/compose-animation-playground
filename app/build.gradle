@@ -8,7 +8,6 @@ apply plugin: 'dagger.hilt.android.plugin'
 android {
     compileSdk 31
     buildToolsVersion "30.0.3"
-
     defaultConfig {
         applicationId "com.theapache64.composeanimationplayground"
         minSdk 21
@@ -20,6 +19,10 @@ android {
         vectorDrawables {
             useSupportLibrary true
         }
+    }
+
+    packagingOptions {
+        resources.excludes.add("META-INF/*")
     }
 
     buildTypes {
@@ -76,4 +79,8 @@ dependencies {
     // Navigation Compose Hilt Integration : Navigation Compose Hilt Integration
     implementation 'androidx.hilt:hilt-navigation-compose:1.0.0-alpha03'
 
+
+
+    // Compose Util : Internal Compose utilities used by other modules
+    implementation 'androidx.compose.ui:ui-util:1.1.0-alpha06'
 }

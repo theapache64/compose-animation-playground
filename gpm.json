@@ -1,0 +1,74 @@
+{
+ "added": [
+  {
+   "id": 1,
+   "type": "implementation",
+   "installed_name": "compose-util",
+   "gpm_dep": {
+    "artifact_id": "ui-util",
+    "default_type": "implementation",
+    "docs": "https://mvnrepository.com/artifact/org.jetbrains.compose.ui/ui-util",
+    "get_from": "Compose",
+    "group_id": "org.jetbrains.compose.ui",
+    "name": "Compose Util",
+    "description": "Internal Compose utilities used by other modules"
+   }
+  },
+  {
+   "id": 2,
+   "type": "implementation",
+   "installed_name": "retrofit",
+   "gpm_dep": {
+    "artifact_id": "retrofit",
+    "default_type": "implementation",
+    "docs": "https://mvnrepository.com/artifact/com.squareup.retrofit2/retrofit",
+    "get_from": "Central",
+    "group_id": "com.squareup.retrofit2",
+    "name": "Retrofit",
+    "description": "A type-safe HTTP client for Android and Java."
+   }
+  },
+  {
+   "id": 3,
+   "type": "implementation",
+   "installed_name": "okhttp",
+   "gpm_dep": {
+    "artifact_id": "okhttp",
+    "default_type": "implementation",
+    "docs": "https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp",
+    "get_from": "Central",
+    "group_id": "com.squareup.okhttp3",
+    "name": "OkHttp",
+    "description": "Square’s meticulous HTTP client for Java and Kotlin."
+   }
+  },
+  {
+   "id": 4,
+   "type": "testImplementation",
+   "installed_name": "junit",
+   "gpm_dep": {
+    "artifact_id": "junit",
+    "default_type": "implementation",
+    "docs": "https://mvnrepository.com/artifact/junit/junit",
+    "get_from": "Central",
+    "group_id": "junit",
+    "name": "JUnit",
+    "description": "JUnit is a unit testing framework for Java, created by Erich Gamma and Kent Beck."
+   }
+  },
+  {
+   "id": 5,
+   "type": "implementation",
+   "installed_name": "compose-util",
+   "gpm_dep": {
+    "artifact_id": "ui-util",
+    "default_type": "implementation",
+    "docs": "https://mvnrepository.com/artifact/androidx.compose.ui/ui-util",
+    "get_from": "Google",
+    "group_id": "androidx.compose.ui",
+    "name": "Compose Util",
+    "description": "Internal Compose utilities used by other modules"
+   }
+  }
+ ]
+}

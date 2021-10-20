@@ -20,9 +20,8 @@ fun AppNavigation() {
     val navController = rememberNavController()
     NavHost(
         navController = navController,
-        startDestination = "createChildTransitionDemo" +
-                ""
-        //startDestination = Screen.Splash.route
+        startDestination = "animate*AsState (TODO)"
+        // startDestination = Screen.Splash.route
     ) {
         // Splash
         composable(Screen.Splash.route) {
@@ -78,8 +77,8 @@ private val animationScreens: List<AnimationScreen> by lazy {
         AnimationScreen("Crossfade Sample") {
             CrossfadeScreen()
         },
-        AnimationScreen("animate*AsState (TODO)") {
-            TODO("TODO: Float, Color, Dp, Size, Bounds, Offset, Rect, Int, IntOffset, and IntSize")
+        AnimationScreen("animate*AsState (TODO)") { onBackClicked ->
+            AnimatePropertyAsStateScreen(onBackClicked)
         },
 
         AnimationScreen("Animatable") { AnimatableScreen() },
