@@ -1,4 +1,4 @@
-package com.theapache64.composeanimationplayground.ui.screen.animation.animateproperty.offset
+package com.theapache64.composeanimationplayground.ui.screen.animation.animateproperty
 
 import androidx.compose.animation.core.animateOffsetAsState
 import androidx.compose.foundation.layout.offset

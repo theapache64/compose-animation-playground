@@ -1,4 +1,4 @@
-package com.theapache64.composeanimationplayground.ui.screen.animation.animateproperty.floatt
+package com.theapache64.composeanimationplayground.ui.screen.animation.animateproperty
 
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.animateFloatAsState

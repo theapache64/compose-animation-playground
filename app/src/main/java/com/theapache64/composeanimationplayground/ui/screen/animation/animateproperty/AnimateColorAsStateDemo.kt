@@ -1,4 +1,4 @@
-package com.theapache64.composeanimationplayground.ui.screen.animation.animateproperty.color
+package com.theapache64.composeanimationplayground.ui.screen.animation.animateproperty
 
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.animation.core.tween
