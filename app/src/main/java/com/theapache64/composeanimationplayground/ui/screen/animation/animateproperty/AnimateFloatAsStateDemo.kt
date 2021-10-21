@@ -1,6 +1,5 @@
-package com.theapache64.composeanimationplayground.ui.screen.animation.animateproperty
+package com.theapache64.composeanimationplayground.ui.screen.animation.animateproperty.floatt
 
-import android.annotation.SuppressLint
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.animateFloatAsState
 import androidx.compose.animation.core.tween
@@ -13,7 +12,7 @@ import androidx.compose.ui.unit.dp
 import com.theapache64.composeanimationplayground.ui.composable.ChildSample
 import com.theapache64.composeanimationplayground.ui.composable.TeslaLogo
 
-@SuppressLint("UnrememberedMutableState")
+
 @Composable
 fun AnimateFloatAsStateDemo(
     isActive: Boolean
