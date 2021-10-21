@@ -11,6 +11,7 @@ import com.theapache64.composeanimationplayground.ui.screen.animation.animatedco
 import com.theapache64.composeanimationplayground.ui.screen.animation.animatedcontent.DefaultScreen
 import com.theapache64.composeanimationplayground.ui.screen.animation.animatedcontent.SizeTransformScreen
 import com.theapache64.composeanimationplayground.ui.screen.animation.animatedvisibility.MutableTransitionStateScreen
+import com.theapache64.composeanimationplayground.ui.screen.animation.animateproperty.AnimatePropertyAsStateScreen
 import com.theapache64.composeanimationplayground.ui.screen.selector.AnimationSelector
 import com.theapache64.composeanimationplayground.ui.screen.splash.SplashScreen
 
