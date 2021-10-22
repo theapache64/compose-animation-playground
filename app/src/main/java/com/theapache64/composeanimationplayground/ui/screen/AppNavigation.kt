@@ -2,6 +2,7 @@ package com.theapache64.composeanimationplayground.ui.screen
 
 import android.content.Intent
 import android.net.Uri
+import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.compose.NavHost
@@ -107,7 +108,7 @@ private val animationScreens: List<AnimationScreen> by lazy {
         AnimationScreen("createChildTransitionDemo") { _, _ ->
             ChildTransitionDemo()
         },
-        AnimationScreen("Reusable updateTransition") { _, _ -> TODO() },
+        AnimationScreen("Reusable updateTransition") { _, _ -> WIP() },
         AnimationScreen("rememberInfiniteTransition") { _, _ -> TODO() },
         AnimationScreen("TargetBasedAnimation") { _, _ -> TODO() },
         AnimationScreen("animationSpec : spring") { _, _ -> TODO("Demo dampingRatio and stiffness with tabs maybe") },
@@ -120,4 +121,9 @@ private val animationScreens: List<AnimationScreen> by lazy {
         AnimationScreen("Custom AnimationVector") { _, _ -> TODO() },
         AnimationScreen("Gesture Animation : SwipeToDismiss") { _, _ -> TODO() },
     )
+}
+
+@Composable
+fun WIP(message: String?= null) {
+    Text(text = message ?: "Work In Progress")
 }

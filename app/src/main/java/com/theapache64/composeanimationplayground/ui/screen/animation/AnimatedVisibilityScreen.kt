@@ -24,56 +24,64 @@ private val animations: List<AnimationItem> by lazy {
 
         AnimationItem(
             title = "fadeIn + fadeOut",
-            description = "Content appears by fading in, and it disappears by fading out"
+            description = "Content appears by fading in, and it disappears by fading out",
+            path = "animatedvisibility/FadeInFadeOutDemo.kt"
         ) { isVisible ->
             FadeInFadeOutDemo(isVisible)
         },
 
         AnimationItem(
             title = "slideIn + slideOut",
-            description = "Content appears by sliding in, and it disappears by sliding out"
+            description = "Content appears by sliding in, and it disappears by sliding out",
+            path = "animatedvisibility/SlideInOutDemo.kt"
         ) { isVisible ->
             SlideInOutDemo(isVisible)
         },
 
         AnimationItem(
             title = "slideIn/slideOut horizontally",
-            description = "Content appears by sliding in horizontally, and it disappears by sliding out horizontally"
+            description = "Content appears by sliding in horizontally, and it disappears by sliding out horizontally",
+            path = "animatedvisibility/SlideInOutHorizontallyDemo.kt"
         ) { isVisible ->
             SlideInOutHorizontallyDemo(isVisible)
         },
 
         AnimationItem(
             title = "slideIn/slideOut vertically",
-            description = "Content appears by sliding in vertically, and it disappears by sliding out vertically"
+            description = "Content appears by sliding in vertically, and it disappears by sliding out vertically",
+            path = "animatedvisibility/SlideInOutVerticallyDemo.kt"
         ) { isVisible ->
             SlideInOutVerticallyDemo(isVisible)
         },
 
         AnimationItem(
             title = "scaleIn + scaleOut",
-            description = "Content appears by scaling in, and it disappears by scaling out"
+            description = "Content appears by scaling in, and it disappears by scaling out",
+            path = "animatedvisibility/ScaleInOutDemo.kt"
         ) { isVisible ->
             ScaleInOutDemo(isVisible)
         },
 
         AnimationItem(
             title = "expandIn + shrinkOut",
-            description = "Content appears by expanding in, and it disappears by shrinking out"
+            description = "Content appears by expanding in, and it disappears by shrinking out",
+            path = "animatedvisibility/ExpandInShrinkOutDemo.kt"
         ) { isVisible ->
             ExpandInShrinkOutDemo(isVisible)
         },
 
         AnimationItem(
             title = "expand/shrink horizontally",
-            description = "Content appears by expanding in horizontally, and it disappears by shrinking out horizontally"
+            description = "Content appears by expanding in horizontally, and it disappears by shrinking out horizontally",
+            path = "animatedvisibility/ExpandShrinkHorizontallyDemo.kt"
         ) { isVisible ->
             ExpandShrinkHorizontallyDemo(isVisible)
         },
 
         AnimationItem(
             title = "expand/shrink vertically",
-            description = "Content appears by expanding in vertically, and it disappears by shrinking out vertically"
+            description = "Content appears by expanding in vertically, and it disappears by shrinking out vertically",
+            path = "animatedvisibility/ExpandShrinkVerticallyDemo.kt"
         ) { isVisible ->
             ExpandShrinkVerticallyDemo(isVisible)
         },
@@ -82,21 +90,24 @@ private val animations: List<AnimationItem> by lazy {
             title = "animateEnterExit",
             description = "Using `animateEnterExit` method, you can add additional animations" +
                     " to the direct/indirect children of `AnimatedVisibility`. Pretty helpful" +
-                    " when you want to inherit animations. "
+                    " when you want to inherit animations. ",
+            path = "animatedvisibility/AnimateEnterExitOnChildDemo.kt"
         ) { isVisible ->
             AnimateEnterExitOnChildDemo(isVisible)
         },
 
         AnimationItem(
             title = "TransitionApiDemo",
-            description = "Content appears by scale in with TeslaRed, and it disappears by scale out with transparent color"
+            description = "Content appears by scale in with TeslaRed, and it disappears by scale out with transparent color",
+            path = "animatedvisibility/TransitionApiDemo.kt"
         ) { isVisible ->
             TransitionApiDemo(isVisible)
         },
 
         AnimationItem(
             title = "Advanced Sample",
-            description = "Content appears by slideIn + expandVertical + fadeIn, and it disappears by slideOut + shrinkVertical + fadeOut"
+            description = "Content appears by slideIn + expandVertical + fadeIn, and it disappears by slideOut + shrinkVertical + fadeOut",
+            path = "animatedvisibility/AnimatedVisibilityAdvancedDemo.kt"
         ) { isVisible ->
             AnimatedVisibilityAdvancedDemo(isVisible)
         },
