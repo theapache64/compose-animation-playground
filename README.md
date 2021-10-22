@@ -47,13 +47,21 @@ Give a ⭐️ if this project helped you!
     <img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" width="160">
 </a>
 
-<a href="https://www.paypal.me/theapache64" target="_blank">
-    <img src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" alt="Donation" width="160">
-</a>
 
 ## ☑️ TODO
 
-- [ ] Task 1
+- [ ] `AnimationScreen("Reusable updateTransition") { TODO() }`
+- [ ] `AnimationScreen("rememberInfiniteTransition") { TODO() }`
+- [ ] `AnimationScreen("TargetBasedAnimation") { TODO() }`
+- [ ] `AnimationScreen("animationSpec : spring") { TODO("Demo dampingRatio and stiffness with tabs maybe") }`
+- [ ] `AnimationScreen("animationSpec : tween") { TODO("Demo with two boxes and custom controls") }`
+- [ ] `AnimationScreen("animationSpec : keyframes") { TODO("Demo with two boxes and custom controls") }`
+- [ ] `AnimationScreen("animationSpec : repeatable") { TODO() }`
+- [ ] `AnimationScreen("animationSpec : infiniteRepeatable") { TODO() }`
+- [ ] `AnimationScreen("animationSpec : snap") { TODO() }`
+- [ ] `AnimationScreen("animationSpec : Easing") { TODO() }`
+- [ ] `AnimationScreen("Custom AnimationVector") { TODO() }`
+- [ ] `AnimationScreen("Gesture Animation : SwipeToDismiss") { TODO() }`
 
 ## 📝 License
 
