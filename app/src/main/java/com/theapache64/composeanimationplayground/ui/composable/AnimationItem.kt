@@ -1,5 +1,6 @@
 package com.theapache64.composeanimationplayground.ui.composable
 
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Divider
 import androidx.compose.material.Icon
@@ -19,11 +20,17 @@ import com.theapache64.composeanimationplayground.ui.theme.CodGray_700
 @Composable
 fun AnimationItem(
     index: Int,
-    animationItem: AnimationItem
+    animationItem: AnimationItem,
+    onClicked: (AnimationItem) -> Unit,
+    modifier: Modifier = Modifier
 ) {
     var isVisible by remember { mutableStateOf(true) }
 
-    Column {
+    Column(
+        modifier = modifier.clickable {
+            onClicked(animationItem)
+        }
+    ) {
         Column(
             Modifier
                 .padding(10.dp)

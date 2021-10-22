@@ -1,6 +1,9 @@
 package com.theapache64.composeanimationplayground.ui.screen
 
+import android.content.Intent
+import android.net.Uri
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.platform.LocalContext
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
@@ -15,14 +18,19 @@ import com.theapache64.composeanimationplayground.ui.screen.animation.animatepro
 import com.theapache64.composeanimationplayground.ui.screen.selector.AnimationSelector
 import com.theapache64.composeanimationplayground.ui.screen.splash.SplashScreen
 
+// TODO : Refactor
+private const val BASE_URL =
+    "https://github.com/theapache64/compose-animation-playground/blob/master/app/src/main/java/com/theapache64/composeanimationplayground/ui/screen/animation"
+
+
 @Composable
 fun AppNavigation() {
 
     val navController = rememberNavController()
     NavHost(
         navController = navController,
-        startDestination = "animate*AsState (TODO)"
-        // startDestination = Screen.Splash.route
+        // startDestination = "animate*AsState (TODO)"
+        startDestination = Screen.Splash.route
     ) {
         // Splash
         composable(Screen.Splash.route) {
@@ -46,9 +54,16 @@ fun AppNavigation() {
 
         for (animationScreen in animationScreens) {
             composable(animationScreen.title) {
-                animationScreen.content(onBackPressed = {
-                    navController.navigateUp()
-                })
+                val context = LocalContext.current
+                animationScreen.content(
+                    onBackPressed = {
+                        navController.navigateUp()
+                    },
+                    onItemClicked = {
+                        val intent = Intent(Intent.ACTION_VIEW, Uri.parse("$BASE_URL/${it.path}"))
+                        context.startActivity(intent)
+                    }
+                )
             }
         }
     }
@@ -56,53 +71,53 @@ fun AppNavigation() {
 
 private val animationScreens: List<AnimationScreen> by lazy {
     mutableListOf(
-        AnimationScreen("AnimatedVisibility") { onBackClicked ->
-            AnimatedVisibilityScreen(onBackClicked)
+        AnimationScreen("AnimatedVisibility") { onBackClicked, onItemClicked ->
+            AnimatedVisibilityScreen(onBackClicked, onItemClicked)
         },
-        AnimationScreen("MutableTransitionState") {
+        AnimationScreen("MutableTransitionState") { _, _ ->
             MutableTransitionStateScreen()
         },
-        AnimationScreen("AnimatedContent") {
+        AnimationScreen("AnimatedContent") { _, _ ->
             DefaultScreen()
         },
-        AnimationScreen("Custom AnimatedContent") {
+        AnimationScreen("Custom AnimatedContent") { _, _ ->
             CustomTransitionScreen()
         },
-        AnimationScreen("SizeTransform Sample") {
+        AnimationScreen("SizeTransform Sample") { _, _ ->
             SizeTransformScreen()
         },
-        AnimationScreen("animateContentSize Sample") {
+        AnimationScreen("animateContentSize Sample") { _, _ ->
             AnimateContentSizeScreen()
         },
 
-        AnimationScreen("Crossfade Sample") {
+        AnimationScreen("Crossfade Sample") { _, _ ->
             CrossfadeScreen()
         },
-        AnimationScreen("animate*AsState (TODO)") { onBackClicked ->
-            AnimatePropertyAsStateScreen(onBackClicked)
+        AnimationScreen("animate*AsState (TODO)") { onBackClicked, onItemClicked ->
+            AnimatePropertyAsStateScreen(onBackClicked, onItemClicked)
         },
 
-        AnimationScreen("Animatable") { AnimatableScreen() },
-        AnimationScreen("updateTransition") {
+        AnimationScreen("Animatable") { _, _ -> AnimatableScreen() },
+        AnimationScreen("updateTransition") { _, _ ->
             UpdateTransitionScreen()
         },
-        AnimationScreen("updateTransition with AnimatedVisibility") {
+        AnimationScreen("updateTransition with AnimatedVisibility") { _, _ ->
             UpdateTransitionAnimateContentScreen()
         },
-        AnimationScreen("createChildTransitionDemo") {
+        AnimationScreen("createChildTransitionDemo") { _, _ ->
             ChildTransitionDemo()
         },
-        AnimationScreen("Reusable updateTransition") { TODO() },
-        AnimationScreen("rememberInfiniteTransition") { TODO() },
-        AnimationScreen("TargetBasedAnimation") { TODO() },
-        AnimationScreen("animationSpec : spring") { TODO("Demo dampingRatio and stiffness with tabs maybe") },
-        AnimationScreen("animationSpec : tween") { TODO("Demo with two boxes and custom controls") },
-        AnimationScreen("animationSpec : keyframes") { TODO("Demo with two boxes and custom controls") },
-        AnimationScreen("animationSpec : repeatable") { TODO() },
-        AnimationScreen("animationSpec : infiniteRepeatable") { TODO() },
-        AnimationScreen("animationSpec : snap") { TODO() },
-        AnimationScreen("animationSpec : Easing") { TODO() },
-        AnimationScreen("Custom AnimationVector") { TODO() },
-        AnimationScreen("Gesture Animation : SwipeToDismiss") { TODO() },
+        AnimationScreen("Reusable updateTransition") { _, _ -> TODO() },
+        AnimationScreen("rememberInfiniteTransition") { _, _ -> TODO() },
+        AnimationScreen("TargetBasedAnimation") { _, _ -> TODO() },
+        AnimationScreen("animationSpec : spring") { _, _ -> TODO("Demo dampingRatio and stiffness with tabs maybe") },
+        AnimationScreen("animationSpec : tween") { _, _ -> TODO("Demo with two boxes and custom controls") },
+        AnimationScreen("animationSpec : keyframes") { _, _ -> TODO("Demo with two boxes and custom controls") },
+        AnimationScreen("animationSpec : repeatable") { _, _ -> TODO() },
+        AnimationScreen("animationSpec : infiniteRepeatable") { _, _ -> TODO() },
+        AnimationScreen("animationSpec : snap") { _, _ -> TODO() },
+        AnimationScreen("animationSpec : Easing") { _, _ -> TODO() },
+        AnimationScreen("Custom AnimationVector") { _, _ -> TODO() },
+        AnimationScreen("Gesture Animation : SwipeToDismiss") { _, _ -> TODO() },
     )
 }

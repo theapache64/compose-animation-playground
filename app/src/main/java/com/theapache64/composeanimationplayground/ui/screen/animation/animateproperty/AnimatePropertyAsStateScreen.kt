@@ -67,7 +67,8 @@ private val animations: List<AnimationItem> by lazy {
 
 @Composable
 fun AnimatePropertyAsStateScreen(
-    onBackClicked: () -> Unit
+    onBackClicked: () -> Unit,
+    onItemClicked: (AnimationItem) -> Unit
 ) {
     Scaffold(
         topBar = {
@@ -85,7 +86,7 @@ fun AnimatePropertyAsStateScreen(
     ) {
         LazyColumn {
             itemsIndexed(animations) { index, animation ->
-                AnimationItem(index, animation)
+                AnimationItem(index, animation, onItemClicked)
             }
         }
     }

@@ -16,7 +16,8 @@ private val animations: List<AnimationItem> by lazy {
     mutableListOf(
         AnimationItem(
             title = "Default",
-            description = "Content appears by fading in and expanding, and it disappears by fading out and shrinking"
+            description = "Content appears by fading in and expanding, and it disappears by fading out and shrinking",
+            path = "animatedvisibility/DefaultDemo.kt"
         ) { isVisible ->
             DefaultDemo(isVisible)
         },
@@ -102,9 +103,11 @@ private val animations: List<AnimationItem> by lazy {
     )
 }
 
+
 @Composable
 fun AnimatedVisibilityScreen(
-    onBackClicked: () -> Unit
+    onBackClicked: () -> Unit,
+    onItemClicked: (AnimationItem)->Unit
 ) {
     Scaffold(
         topBar = {
@@ -122,7 +125,11 @@ fun AnimatedVisibilityScreen(
     ) {
         LazyColumn {
             itemsIndexed(animations) { index, animation ->
-                AnimationItem(index, animation)
+                AnimationItem(
+                    index = index,
+                    animationItem = animation,
+                    onClicked = onItemClicked
+                )
             }
         }
     }

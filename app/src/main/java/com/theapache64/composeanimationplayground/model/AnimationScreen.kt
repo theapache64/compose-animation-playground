@@ -4,5 +4,8 @@ import androidx.compose.runtime.Composable
 
 data class AnimationScreen(
     val title: String,
-    val content: @Composable (onBackPressed: () -> Unit) -> Unit
+    val content: @Composable (
+        onBackPressed: () -> Unit,
+        onItemClicked: (AnimationItem) -> Unit
+    ) -> Unit
 )
