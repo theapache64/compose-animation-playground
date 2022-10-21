@@ -16,7 +16,6 @@ import androidx.compose.ui.unit.dp
 import com.theapache64.composeanimationplayground.ui.composable.BigColumn
 import com.theapache64.composeanimationplayground.ui.composable.TeslaLogo
 
-@ExperimentalTransitionApi
 @Composable
 fun MutableTransitionStateScreen() {
     val animationState = remember {

@@ -1,6 +1,7 @@
 package com.theapache64.composeanimationplayground.ui.screen.animation
 
 import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.animation.core.*
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
@@ -83,6 +84,7 @@ fun Label(text: String) {
     )
 }
 
+@OptIn(ExperimentalAnimationApi::class)
 @Composable
 fun RedBox(transition: Transition<Boolean>) {
     transition.AnimatedVisibility(
@@ -98,6 +100,7 @@ fun RedBox(transition: Transition<Boolean>) {
     }
 }
 
+@OptIn(ExperimentalAnimationApi::class)
 @Composable
 fun GreenBox(
     transition: Transition<Boolean>
@@ -115,6 +118,7 @@ fun GreenBox(
     }
 }
 
+@OptIn(ExperimentalAnimationApi::class)
 @Composable
 fun BlueBox(transition: Transition<Boolean>) {
     transition.AnimatedVisibility(

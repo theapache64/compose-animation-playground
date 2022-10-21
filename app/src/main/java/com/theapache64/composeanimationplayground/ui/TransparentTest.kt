@@ -43,8 +43,8 @@ fun App() {
                 }.apply {
                     targetState = true
                 },
-                enter = slideInHorizontally({ it }),
-                exit = slideOutHorizontally({ -it })
+                enter = slideInHorizontally { it },
+                exit = slideOutHorizontally { -it }
             ) {
                 GreenScreen()
             }
@@ -73,7 +73,7 @@ fun releaseLock() {
 
 @Composable
 fun RedScreen(
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
 ) {
     DisposableEffect(Unit) {
         println("123: RedScreen created")
@@ -95,7 +95,7 @@ fun RedScreen(
 
 @Composable
 fun GreenScreen(
-    modifier: Modifier = Modifier
+    modifier: Modifier = Modifier,
 ) {
     Box(
         modifier = modifier

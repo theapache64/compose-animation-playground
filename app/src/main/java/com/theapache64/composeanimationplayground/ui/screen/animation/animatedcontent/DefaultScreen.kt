@@ -1,6 +1,7 @@
 package com.theapache64.composeanimationplayground.ui.screen.animation.animatedcontent
 
 import androidx.compose.animation.AnimatedContent
+import androidx.compose.animation.ExperimentalAnimationApi
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.material.Button
@@ -11,6 +12,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.theapache64.composeanimationplayground.ui.composable.BigColumn
 
+@OptIn(ExperimentalAnimationApi::class)
 @Composable
 fun DefaultScreen() {
     BigColumn {

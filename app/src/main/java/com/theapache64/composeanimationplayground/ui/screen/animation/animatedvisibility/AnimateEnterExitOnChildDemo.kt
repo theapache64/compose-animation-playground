@@ -6,6 +6,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import com.theapache64.composeanimationplayground.ui.composable.TeslaLogo
 
+@OptIn(ExperimentalAnimationApi::class)
 @Composable
 fun AnimateEnterExitOnChildDemo(isVisible: Boolean) {
     AnimatedVisibility(

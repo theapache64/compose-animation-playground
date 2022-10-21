@@ -22,6 +22,7 @@ enum class BoxStates {
     Red, Green, RedAndGreen
 }
 
+@OptIn(ExperimentalAnimationApi::class)
 @Preview
 @Composable
 fun UpdateTransitionAnimateContentScreen() {
@@ -82,6 +83,7 @@ fun GreenBox() {
     )
 }
 
+@OptIn(ExperimentalAnimationApi::class)
 @Preview
 @Composable
 fun Test() {

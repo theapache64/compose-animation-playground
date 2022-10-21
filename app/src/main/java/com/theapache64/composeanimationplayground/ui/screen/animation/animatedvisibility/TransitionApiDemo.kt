@@ -13,6 +13,7 @@ import com.theapache64.composeanimationplayground.ui.composable.TeslaLogo
 import com.theapache64.composeanimationplayground.ui.screen.animation.DURATION
 import com.theapache64.composeanimationplayground.ui.theme.TeslaRed
 
+@OptIn(ExperimentalAnimationApi::class)
 @Composable
 fun TransitionApiDemo(isVisible: Boolean) {
     AnimatedVisibility(

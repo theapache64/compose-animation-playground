@@ -14,6 +14,7 @@ import com.theapache64.composeanimationplayground.ui.composable.BigColumn
 
 private const val FLY_RANGE = 500
 
+@OptIn(ExperimentalAnimationApi::class)
 @Composable
 fun CustomTransitionScreen() {
     BigColumn {
@@ -27,14 +28,14 @@ fun CustomTransitionScreen() {
                      * Incremented value should slideIn from top (-ve fly range) with fadeIn effect.
                      * When the value is incremented again, current value should slideOut to bottom (+ve fly range) and fadeOut.
                      */
-                    slideInVertically({ -FLY_RANGE }) + fadeIn() with slideOutVertically({ FLY_RANGE }) + fadeOut()
+                    slideInVertically{ -FLY_RANGE } + fadeIn() with slideOutVertically{ FLY_RANGE } + fadeOut()
                 } else {
                     /**
                      * DECREMENT ANIMATION:
                      * Decremented value should slideIn from bottom (+ve fly range) with fadeIn effect.
                      * When the value decremented again, current value should slideOut to top (-ve fly range) and fadeOut
                      */
-                    slideInVertically({ FLY_RANGE }) + fadeIn() with slideOutVertically({ -FLY_RANGE }) + fadeOut()
+                    slideInVertically{ FLY_RANGE } + fadeIn() with slideOutVertically{ -FLY_RANGE } + fadeOut()
                 }.using(
                     SizeTransform(clip = false)
                 )

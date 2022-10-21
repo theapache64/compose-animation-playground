@@ -5,6 +5,7 @@ import androidx.compose.animation.core.keyframes
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.size
+import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.Surface
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
@@ -16,6 +17,7 @@ import com.theapache64.composeanimationplayground.ui.composable.ComposeLogo
 import com.theapache64.composeanimationplayground.ui.composable.TeslaLogo
 import com.theapache64.composeanimationplayground.ui.theme.CodGray_700
 
+@OptIn(ExperimentalMaterialApi::class, ExperimentalAnimationApi::class)
 @Preview
 @Composable
 fun SizeTransformScreen() {
