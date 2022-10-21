@@ -69,6 +69,20 @@
     "name": "Compose Util",
     "description": "Internal Compose utilities used by other modules"
    }
+  },
+  {
+   "id": 6,
+   "type": "implementation",
+   "installed_name": "navigation-compose",
+   "gpm_dep": {
+    "artifact_id": "navigation-compose",
+    "default_type": "implementation",
+    "docs": "https://mvnrepository.com/artifact/androidx.navigation/navigation-compose",
+    "get_from": "Google",
+    "group_id": "androidx.navigation",
+    "name": "Compose Navigation",
+    "description": "Compose integration with Navigation"
+   }
   }
  ]
 }
