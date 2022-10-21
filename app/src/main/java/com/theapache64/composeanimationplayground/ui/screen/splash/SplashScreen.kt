@@ -7,6 +7,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
@@ -20,14 +21,17 @@ import com.theapache64.composeanimationplayground.R
 @Composable
 fun SplashScreen(
     viewModel: SplashViewModel = hiltViewModel(),
-    onSplashFinished: () -> Unit
+    onSplashFinished: () -> Unit,
 ) {
 
     val versionName by viewModel.versionName.collectAsState()
-    val isSplashFinished by viewModel.isSplashFinished.collectAsState(initial = false)
 
-    if (isSplashFinished) {
-        onSplashFinished()
+    LaunchedEffect(viewModel) {
+        viewModel.isSplashFinished.collect { isSplashFinished ->
+            if (isSplashFinished) {
+                onSplashFinished()
+            }
+        }
     }
 
     Box(
