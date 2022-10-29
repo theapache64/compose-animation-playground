@@ -8,9 +8,11 @@
 <img alt="Twitter: theapache64" src="https://img.shields.io/twitter/follow/theapache64.svg?style=social" />
 </a>
 
-> Playground app for compose animation
+> A simple playground app I created to try compose animation
 
-Coming soon
+
+https://user-images.githubusercontent.com/9678279/198839537-2794bac0-8075-470b-9c4d-aea9bc9d719c.mp4
+
 
 ## ✍️ Author
 
@@ -50,18 +52,18 @@ Give a ⭐️ if this project helped you!
 
 ## ☑️ TODO
 
-- [ ] `AnimationScreen("Reusable updateTransition") { TODO() }`
-- [ ] `AnimationScreen("rememberInfiniteTransition") { TODO() }`
-- [ ] `AnimationScreen("TargetBasedAnimation") { TODO() }`
-- [ ] `AnimationScreen("animationSpec : spring") { TODO("Demo dampingRatio and stiffness with tabs maybe") }`
-- [ ] `AnimationScreen("animationSpec : tween") { TODO("Demo with two boxes and custom controls") }`
-- [ ] `AnimationScreen("animationSpec : keyframes") { TODO("Demo with two boxes and custom controls") }`
-- [ ] `AnimationScreen("animationSpec : repeatable") { TODO() }`
-- [ ] `AnimationScreen("animationSpec : infiniteRepeatable") { TODO() }`
-- [ ] `AnimationScreen("animationSpec : snap") { TODO() }`
-- [ ] `AnimationScreen("animationSpec : Easing") { TODO() }`
-- [ ] `AnimationScreen("Custom AnimationVector") { TODO() }`
-- [ ] `AnimationScreen("Gesture Animation : SwipeToDismiss") { TODO() }`
+- [ ] AnimationScreen("Reusable updateTransition") { TODO() }
+- [ ] AnimationScreen("rememberInfiniteTransition") { TODO() }
+- [ ] AnimationScreen("TargetBasedAnimation") { TODO() }
+- [ ] AnimationScreen("animationSpec : spring") { TODO("Demo dampingRatio and stiffness with tabs maybe") }
+- [ ] AnimationScreen("animationSpec : tween") { TODO("Demo with two boxes and custom controls") }
+- [ ] AnimationScreen("animationSpec : keyframes") { TODO("Demo with two boxes and custom controls") }
+- [ ] AnimationScreen("animationSpec : repeatable") { TODO() }
+- [ ] AnimationScreen("animationSpec : infiniteRepeatable") { TODO() }
+- [ ] AnimationScreen("animationSpec : snap") { TODO() }
+- [ ] AnimationScreen("animationSpec : Easing") { TODO() }
+- [ ] AnimationScreen("Custom AnimationVector") { TODO() }
+- [ ] AnimationScreen("Gesture Animation : SwipeToDismiss") { TODO() }
 
 ## 📝 License
 
