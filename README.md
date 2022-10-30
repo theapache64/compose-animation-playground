@@ -53,7 +53,6 @@ Give a ⭐️ if this project helped you!
 ## ☑️ TODO
 
 - [ ] AnimationScreen("Reusable updateTransition") { TODO() }
-- [ ] AnimationScreen("rememberInfiniteTransition") { TODO() }
 - [ ] AnimationScreen("TargetBasedAnimation") { TODO() }
 - [ ] AnimationScreen("animationSpec : spring") { TODO("Demo dampingRatio and stiffness with tabs maybe") }
 - [ ] AnimationScreen("animationSpec : tween") { TODO("Demo with two boxes and custom controls") }
