@@ -109,7 +109,7 @@ private val animationScreens: List<AnimationScreen> by lazy {
             ChildTransitionDemo()
         },
         AnimationScreen("Reusable updateTransition") { _, _ -> WIP() },
-        AnimationScreen("rememberInfiniteTransition") { _, _ -> TODO() },
+        AnimationScreen("rememberInfiniteTransition") { _, _ -> InfiniteTransitionDemo() },
         AnimationScreen("TargetBasedAnimation") { _, _ -> TODO() },
         AnimationScreen("animationSpec : spring") { _, _ -> TODO("Demo dampingRatio and stiffness with tabs maybe") },
         AnimationScreen("animationSpec : tween") { _, _ -> TODO("Demo with two boxes and custom controls") },
@@ -124,6 +124,6 @@ private val animationScreens: List<AnimationScreen> by lazy {
 }
 
 @Composable
-fun WIP(message: String?= null) {
+fun WIP(message: String? = null) {
     Text(text = message ?: "Work In Progress")
 }
